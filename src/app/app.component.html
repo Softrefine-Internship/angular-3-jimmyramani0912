@@ -15,4 +15,75 @@
       appTrim
     />
   </div>
+  <hr />
+  <div>
+    <h3>ToolTip!</h3>
+    <div class="row-container">
+      <div>
+        <label for="position">Select Position:</label>
+        <select
+          class="form-control"
+          id="position"
+          [(ngModel)]="selectedPosition"
+        >
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
+      <div>
+        <label for="color">Select Font Color:</label>
+        <input
+          class="form-control"
+          type="color"
+          id="color"
+          [(ngModel)]="selectedFontColor"
+        />
+      </div>
+      <div>
+        <label for="background-color">Select Background Color:</label>
+        <input
+          class="form-control"
+          type="color"
+          id="background-color"
+          [(ngModel)]="selectedBgColor"
+        />
+      </div>
+      <div>
+        <label for="font-size">Select Font Size:</label>
+        <select
+          class="form-control"
+          id="font-size"
+          [(ngModel)]="selectedFontSize"
+        >
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="16px">16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+          <option value="22px">22px</option>
+          <option value="24px">24px</option>
+          <option value="26px">26px</option>
+          <option value="28px">28px</option>
+          <option value="30px">30px</option>
+          <option value="32px">32px</option>
+        </select>
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center">
+      <div style="position: relative">
+        <span
+          appTooltip="Customised Tooltip!"
+          [tooltipPosition]="selectedPosition"
+          [tooltipBackgroundColor]="selectedBgColor"
+          [tooltipFontColor]="selectedFontColor"
+          [tooltipFontSize]="selectedFontSize"
+          style="cursor: pointer"
+        >
+          Hover Me!
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

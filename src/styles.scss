@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+.row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 40px;
+}
