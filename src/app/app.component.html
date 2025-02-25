@@ -72,17 +72,11 @@
       </div>
     </div>
     <div style="width: 100%; text-align: center">
-      <div style="position: relative">
-        <span
-          appTooltip="Customised Tooltip!"
-          [tooltipPosition]="selectedPosition"
-          [tooltipBackgroundColor]="selectedBgColor"
-          [tooltipFontColor]="selectedFontColor"
-          [tooltipFontSize]="selectedFontSize"
-          style="cursor: pointer"
-        >
-          Hover Me!
-        </span>
+      <div style="width: 100%; text-align: center">
+        <div style="position: relative">
+          <span #tooltipElement class="tooltip-text">Customised Tooltip!</span>
+          <span appTooltip style="cursor: pointer">Hover Me!</span>
+        </div>
       </div>
     </div>
   </div>
